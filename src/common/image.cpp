@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <libcam/image.hpp>
+#include <cassert>
 
 namespace libcam {
 

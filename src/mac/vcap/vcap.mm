@@ -19,7 +19,7 @@ namespace libcam {
         @autoreleasepool {
             auto session = [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[
                             AVCaptureDeviceTypeBuiltInWideAngleCamera,
-                            AVCaptureDeviceTypeExternalUnknown]                   mediaType:AVMediaTypeVideo
+                            AVCaptureDeviceTypeExternal]                   mediaType:AVMediaTypeVideo
                                                                                    position:AVCaptureDevicePositionBack];
             if (index >= session.devices.count) {
                 throw VideoCaptureBadDeviceIndex(index);
@@ -97,7 +97,7 @@ namespace libcam {
         @autoreleasepool {
             auto session = [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[
                             AVCaptureDeviceTypeBuiltInWideAngleCamera,
-                            AVCaptureDeviceTypeExternalUnknown]                   mediaType:AVMediaTypeVideo
+                            AVCaptureDeviceTypeExternal]                   mediaType:AVMediaTypeVideo
                                                                                    position:AVCaptureDevicePositionBack];
             std::vector<CaptureDeviceInfo> result(size_t(session.devices.count));
             for (size_t index = 0; index < result.size(); ++index) {
